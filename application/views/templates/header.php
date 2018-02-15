@@ -2,21 +2,9 @@
   <head>
     <title>ciBlog</title>
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/styles.css">
   </head>
   <body>
-    <!-- <nav class="navbar navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="<?php echo base_url(); ?>">ciBlog</a>
-        </div>
-        <div id="navbar">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-            <li class="nav-item"><a href="<?php echo base_url(); ?>about">About</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav> -->
 
     <nav class="navbar navbar-inverse">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -34,6 +22,7 @@
         <ul class="nav navbar-nav">
             <li class="nav-item"><a href="<?php echo base_url(); ?>">Home</a></li>
             <li class="nav-item"><a href="<?php echo base_url(); ?>about">About</a></li>
+            <li class="nav-item"><a href="<?php echo base_url(); ?>posts">Blog</a></li>
         </ul>
         <!-- <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Login</a></li>
