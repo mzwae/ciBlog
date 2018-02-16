@@ -25,9 +25,9 @@
               <li class="nav-item"><a href="<?php echo base_url(); ?>about">About</a></li>
               <li class="nav-item"><a href="<?php echo base_url(); ?>posts">Blog</a></li>
           </ul>
-          <!-- <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Login</a></li>
-          </ul> -->
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="<?=base_url();?>/posts/create">Creat Post</a></li>
+          </ul>
       </div>
     </div>
 </nav>
