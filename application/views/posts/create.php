@@ -9,6 +9,14 @@
     <label>Body</label>
     <textarea id="postEditor" rows="10" class="form-control" name="body" placeholder="Add Body"></textarea>
   </div>
+  <div class="form-group">
+    <label>Category</label>
+    <select name="category_id" class="form-control">
+      <?php foreach ($categories as $category): ?>
+        <option value=""><?php echo $category['name'] ?></option>
+      <?php endforeach;  ?>
+    </select>
+  </div>
 
   <button type="submit" class="btn btn-default">Post</button>
 </form>
