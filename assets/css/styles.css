@@ -4,3 +4,13 @@
   marging: 3px;
   display: block;
 }
+
+.post-image{
+  width: 100%;
+
+}
+
+.cover-image{
+  width: 100%;
+  height: 300px;
+}
