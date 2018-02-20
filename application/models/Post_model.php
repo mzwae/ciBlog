@@ -16,9 +16,10 @@ class Post_model extends CI_Model
             // print_r($query->result_array());
             return $query->result_array();
         } else {
-        
+
             $query = $this->db->get_where('posts', array('slug' => $slug));
-            print_r($query->result_array());
+            // echo "slug is $slug";
+            // print_r($query->result_array());
             return $query->row_array();
         }
     }
