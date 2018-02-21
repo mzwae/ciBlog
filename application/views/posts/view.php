@@ -12,8 +12,8 @@
 </form>
 <hr>
 <h3>Comments</h3>
-<?php if($comments) : ?>
-  <?php foreach($comments as $comment) : ?>
+<?php if ($comments) : ?>
+  <?php foreach ($comments as $comment) : ?>
     <div class="well">
       <p><?=$comment['body']?></p>
       <p><small>Add by <b>[<?=$comment['name']?>]</b> on <?=$comment['created_at']?></small></p>
