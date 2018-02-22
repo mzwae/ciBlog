@@ -28,6 +28,7 @@
               <li class="nav-item"><a href="<?=base_url()?>categories">Categories</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+              <li><a href="<?=base_url();?>/users/register">Register</a></li>
               <li><a href="<?=base_url();?>/posts/create">Creat Post</a></li>
               <li><a href="<?=base_url();?>/categories/create">Creat Category</a></li>
           </ul>
@@ -36,3 +37,23 @@
 </nav>
 
 <div class="container">
+  <!-- Flash messages -->
+  <?php
+
+  if($this->session->flashdata('user_registered')){
+    echo '<p class="alert alert-success">' . $this->session->flashdata('user_registered') . '</p>';
+  }
+  if($this->session->flashdata('post_created')){
+    echo '<p class="alert alert-success">' . $this->session->flashdata('post_created') . '</p>';
+  }
+  if($this->session->flashdata('post_updated')){
+    echo '<p class="alert alert-success">' . $this->session->flashdata('post_updated') . '</p>';
+  }
+  if($this->session->flashdata('post_deleted')){
+    echo '<p class="alert alert-success">' . $this->session->flashdata('post_deleted') . '</p>';
+  }
+  if($this->session->flashdata('category_created')){
+    echo '<p class="alert alert-success">' . $this->session->flashdata('category_created') . '</p>';
+  }
+
+    ?>
