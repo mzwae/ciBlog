@@ -28,6 +28,7 @@
               <li class="nav-item"><a href="<?=base_url()?>categories">Categories</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+              <li><a href="<?=base_url();?>/users/login">Login</a></li>
               <li><a href="<?=base_url();?>/users/register">Register</a></li>
               <li><a href="<?=base_url();?>/posts/create">Creat Post</a></li>
               <li><a href="<?=base_url();?>/categories/create">Creat Category</a></li>
@@ -54,6 +55,9 @@
   }
   if($this->session->flashdata('category_created')){
     echo '<p class="alert alert-success">' . $this->session->flashdata('category_created') . '</p>';
+  }
+  if($this->session->flashdata('login_failed')){
+    echo '<p class="alert alert-danger">' . $this->session->flashdata('login_failed') . '</p>';
   }
 
     ?>
