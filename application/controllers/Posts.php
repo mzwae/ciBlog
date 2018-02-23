@@ -28,6 +28,10 @@ class Posts extends CI_Controller
     }
 
     public function create(){
+      // Check if user is logged in
+      if (!$this->session->userdata('logged_in')) {
+        redirect('users/login');
+      }
       $data['title'] = 'Create Post';
       $data['categories'] = $this->post_model->get_categories();
       $this->form_validation->set_rules('title', 'Title', 'required');
@@ -70,6 +74,11 @@ class Posts extends CI_Controller
     }
 
     public function delete($id){
+      // Check if user is logged in
+      if (!$this->session->userdata('logged_in')) {
+        redirect('users/login');
+      }
+
       $this->post_model->delete_post($id);
 
       //Set messages
@@ -79,6 +88,10 @@ class Posts extends CI_Controller
     }
 
     public function edit($slug){
+      // Check if user is logged in
+      if (!$this->session->userdata('logged_in')) {
+        redirect('users/login');
+      }
       $data['post'] = $this->post_model->get_posts($slug);
       $data['categories'] = $this->post_model->get_categories();
 
@@ -93,6 +106,10 @@ class Posts extends CI_Controller
     }
 
     public function update(){
+      // Check if user is logged in
+      if (!$this->session->userdata('logged_in')) {
+        redirect('users/login');
+      }
       $this->post_model->update_post();
       $slug = url_title($this->input->post('title'));
 
