@@ -93,6 +93,11 @@ class Posts extends CI_Controller
         redirect('users/login');
       }
       $data['post'] = $this->post_model->get_posts($slug);
+
+      // Check whether logged in user is the owner of the post
+      if ($this->session->userdata('user_id') != $this->post_model->get_posts($slug)['user_id']) {
+        redirect('posts');
+      }
       $data['categories'] = $this->post_model->get_categories();
 
       if (empty($data['post'])) {
