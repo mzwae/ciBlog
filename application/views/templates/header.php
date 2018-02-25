@@ -70,5 +70,8 @@
   if ($this->session->flashdata('user_loggedout')) {
       echo '<p class="alert alert-success">' . $this->session->flashdata('user_loggedout') . '</p>';
   }
+  if ($this->session->flashdata('category_deleted')) {
+      echo '<p class="alert alert-success">' . $this->session->flashdata('category_deleted') . '</p>';
+  }
 
     ?>
