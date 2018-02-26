@@ -7,7 +7,7 @@ class Posts extends CI_Controller
         // Pagination Config
         $config['base_url'] = base_url() . 'posts/index/';
         $config['total_rows'] = $this->db->count_all('posts');
-        $config['per_page'] = 3;
+        $config['per_page'] = 2;
         $config['uri_segment'] = 3;
         $config['attributes'] = array('class' => 'pagination-links' );
         // Init Pagination

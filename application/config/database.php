@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '123456',
-	'database' => 'ciblog',
+	'hostname' => 'sql2.freesqldatabase.com',// 'localhost'
+	'username' => 'sql2223404',// 'root'
+	'password' => 'eH7!vT8*',// '123456'
+	'database' => 'sql2223404',//'ciblog'
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
