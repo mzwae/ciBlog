@@ -1,6 +1,8 @@
 <h2><?php echo $post['title']; ?></h2>
 <small class="post-date">Posted on: <?php echo $post['created_at']; ?> in <strong><?=$post['category_id']?></strong></small> <br>
-<img class="cover-image" src="<?=site_url()?>assets/images/posts/<?=$post['post_image']?>">
+<div class="cover-container">
+  <img class="cover-image" src="<?=site_url()?>assets/images/posts/<?=$post['post_image']?>">
+</div>
 <div class="post-body">
   <?php echo $post['body']; ?>
 </div>
