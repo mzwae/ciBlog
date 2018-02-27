@@ -44,3 +44,8 @@ a.pagination-links{
 .cat-delete{
   display: inline;
 }
+
+footer{
+  margin-bottom:50px;
+  text-align:center;
+ }
