@@ -72,13 +72,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
-
+//mysql://bbcc757c13d103:a2053a21@us-cdbr-iron-east-02.cleardb.net/heroku_a4b4ded53fd5256?reconnect=true
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'sql2.freesqldatabase.com',// 'localhost'
-	'username' => 'sql2223404',// 'root'
-	'password' => 'eH7!vT8*',// '123456'
-	'database' => 'sql2223404',//'ciblog'
+	'hostname' => 'us-cdbr-iron-east-02.cleardb.net',// 'localhost'
+	'username' => 'bbcc757c13d103',// 'root'
+	'password' => 'a2053a21',// '123456'
+	'database' => 'heroku_a4b4ded53fd5256',//'ciblog'
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
