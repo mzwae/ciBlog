@@ -72,13 +72,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
-//mysql://bbcc757c13d103:a2053a21@us-cdbr-iron-east-02.cleardb.net/heroku_a4b4ded53fd5256?reconnect=true
+switch (ENVIRONMENT)
+{
+	case 'development':
+        $hostname = "localhost";
+        $username = "root";
+        $password = "123456";
+        $database = "ciblog";
+	break;
+
+	case 'production':
+        $hostname =  $_SERVER['HOSTNAME'];
+        $username = $_SERVER['USERNAME'];
+        $password = $_SERVER['PASSWORD'];
+        $database = $_SERVER['DBNAME'];
+		
+	break;
+
+	default:
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'The application environment is not set correctly.';
+		exit(1); // EXIT_ERROR
+}
+
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'us-cdbr-iron-east-02.cleardb.net',// 'localhost'
-	'username' => 'bbcc757c13d103',// 'root'
-	'password' => 'a2053a21',// '123456'
-	'database' => 'heroku_a4b4ded53fd5256',//'ciblog'
+	'hostname' => $hostname,// 'localhost'
+	'username' => $username,// 'root'
+	'password' => $password,// '123456'
+	'database' => $database,//'ciblog'
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -94,3 +116,5 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+
