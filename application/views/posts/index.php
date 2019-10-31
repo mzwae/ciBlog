@@ -9,7 +9,8 @@
   </div>
   <div class="col-md-9">
     <small class="post-date">Posted on: <?=$post['created_at']?> in <strong><?= $post['name']?></strong></small> <br>
-    <?php echo word_limiter($post['body'], 50); ?>
+    <?php echo word_limiter($post['body'], 50); ?> 
+
   </div>
 </div>
 <br>
