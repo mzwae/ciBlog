@@ -10,7 +10,6 @@ class category_model extends CI_Model{
       'name' => $this->input->post('name'),
       'user_id' => $this->session->userdata('user_id')
     );
-
     return $this->db->insert('categories', $data);
   }
 
