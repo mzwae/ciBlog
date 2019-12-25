@@ -46,7 +46,7 @@ class Categories extends CI_Controller{
       }
       $this->category_model->delete_category($id);
 
-      //Set messages
+      //Set error messages
       $this->session->set_flashdata('category_deleted', 'Your category has been deleted!');
       redirect('categories');
   }
