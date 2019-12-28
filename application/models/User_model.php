@@ -29,7 +29,7 @@ class User_model extends CI_Model{
 
   }
 
-  // Check email exists
+  // Check whether email exists
   public function check_email_exists($email){
     $query = $this->db->get_where('users', array('email' => $email));
 
